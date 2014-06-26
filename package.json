@@ -1,0 +1,23 @@
+{
+  "autor": "pavelpower <pavel.power@gmail.com>",
+  "name": "i18n-test",
+  "version": "0.0.1",
+  "description": "Sample use i18n with jade",
+  "main": "index.js",
+  "scripts": {
+    "build" : "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.2",
+    "gulp-clean": "^0.3.1",
+    "gulp-jade": "^0.6.0",
+    "gulp-rename": "^1.2.0",
+    "i18next": "^1.7.4",
+    "i18next-parser": "^0.1.10",
+    "jade": "^1.3.1",
+    "node-gettext": "^0.2.14"
+  }
+}

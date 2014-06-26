@@ -1,0 +1,4 @@
+### Created by http://gitignore.hsz.mobi
+.idea/
+dist/
+node_modules/
