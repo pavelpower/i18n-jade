@@ -46,11 +46,11 @@ gulp.task('clear', function() {
 gulp.task('loadNamespaces', function(callback) {
     plugins.i18n.loadNamespaces(namespaces, function() {
         nameSpacesIsLoaded = true;
-        callback();
+        callback(null);
     });
 });
 
-gulp.task('default', tasks_locals.concat('clear'));
+gulp.task('default', tasks_locals);
 
 /**
  * Generate gulp tasks for create locales files
@@ -89,7 +89,7 @@ function createTaskI18n(lng, ns, task_name) {
             return;
         }
 
-        return gulp.src('./*.jade')
+        return gulp.src(paths.templates)
             .pipe(plugins.jade({
                 locals: {
                     t: function(key, options) {
