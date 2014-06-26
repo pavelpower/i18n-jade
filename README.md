@@ -1,9 +1,9 @@
-i18n-jade
+[i18next](http://i18next.com/)-jade 
 =========
 
-Sample use i18next with jade for generate static pages
+Sample use [i18next](http://i18next.com/) with jade for generate static pages
 
-Пример использования i18next вместе с шаблонизатором jade для генерации статических страниц
+Пример использования [i18next](http://i18next.com/) вместе с шаблонизатором jade для генерации статических страниц
 
 
 ```bash
