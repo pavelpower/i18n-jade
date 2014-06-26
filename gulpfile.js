@@ -12,7 +12,7 @@ var languages = ['dev', 'ru', 'en', 'ua'];
 var namespaces = ['bmw', 'mersedes'];
 
 var paths = {
-    dist: './dist/',
+    dest: './dest/',
     templates: './templates/*.jade',
     locales: 'locales'
 };
@@ -38,18 +38,8 @@ plugins.i18n.init({
 });
 
 // TASKS
-
-gulp.task('i18parser', function() {
-    return gulp.src(paths.templates)
-        .pipe(plugins.i18parser({
-            locales: languages,
-            namespace: 'mersedes'
-        }))
-        .pipe(paths.locales);
-});
-
 gulp.task('clear', function() {
-    return gulp.src(paths.dist)
+    return gulp.src(paths.dest)
         .pipe(plugins.clean({force: true}));
 });
 
@@ -70,7 +60,7 @@ gulp.task('default', tasks_locals.concat('clear'));
  * @returns {string} task name
  */
 function createTaskI18nParse(lng, ns, task_name) {
-    gulp.task(task_name, ['loadNamespaces'], function () {
+    gulp.task(task_name, function () {
         return gulp.src(paths.templates)
             .pipe(plugins.i18parser({
                 locales: lng,
@@ -114,7 +104,7 @@ function createTaskI18n(lng, ns, task_name) {
                 dirname: ns,
                 suffix: '-' + lng
             }))
-            .pipe(gulp.dest(paths.dist));
+            .pipe(gulp.dest(paths.dest));
 
     });
 
