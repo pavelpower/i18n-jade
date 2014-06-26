@@ -9,5 +9,5 @@ Sample use i18next with jade for generate static pages
 ```bash
 $ git clone git@github.com:pavelpower/i18n-jade.git && cd i18n-jade
 $ npm install
-$ npm build
+$ npm run build
 ```
